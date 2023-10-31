@@ -134,7 +134,7 @@ a:hover {
     height: 100%;
 }
 .member-title {
-    font-size: 20px;
+    font-size: 18px;
     margin-inline: 5px;
 }
 @media (max-width: 600px) {

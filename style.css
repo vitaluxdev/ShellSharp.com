@@ -25,6 +25,26 @@ body {
     margin-bottom: -35px;
     width: 180px; height: 180px;
 }
+.socials {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+.social-item {
+    display: flex;
+    height: auto; width: 100%;
+    margin-block: 15px;
+    flex-direction: row;
+}
+.social-name {
+    width: 100%;
+}
+.social-image {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
 .contact {
     display: flex;
     flex-direction: column;
@@ -44,6 +64,12 @@ a {
 }
 a:hover {
     text-decoration: underline;
+}
+.image {
+    transition: ease-in;
+}
+.image:hover {
+    transform: scale(1.125);
 }
 .main {
     display: flex;
@@ -86,10 +112,6 @@ a:hover {
     margin-inline: 20px;
     font-size: 10px;
 }
-.member-name {
-    margin-top: 5px;
-    font-size: 15px;
-}
 .separator {
     height: 1vh;
 }
@@ -126,16 +148,24 @@ a:hover {
     background-color: black;
     text-align: center;
 }
+.member-name {
+    padding-block: 10px;
+    font-size: 15px;
+}
 .member-image {
     display: flex;
     align-items: center;
     flex-direction: column;
     width: auto;
-    height: 100%;
+    height: fit-content;
 }
 .member-title {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     font-size: 18px;
-    margin-inline: 5px;
+    padding: 5px;
+    justify-content: center;
 }
 @media (max-width: 600px) {
     .about-me {

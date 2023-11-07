@@ -36,6 +36,7 @@ body {
     height: auto; width: 100%;
     margin-block: 15px;
     flex-direction: row;
+    align-items: center;
 }
 .social-name {
     width: 100%;
@@ -68,6 +69,12 @@ a:hover {
 .image {
     transition: ease-out;
     transition-duration: 0.2s;
+}
+#youtube {
+    width: 60px; height: 45px;
+}
+#music {
+    width: 45px; height: 45px;
 }
 .image:hover {
     transform: scale(1.125);
@@ -168,7 +175,41 @@ a:hover {
         overflow-y: scroll;
         font-size: 13px;
     }
-    .subtext {
-        font-size: 8px;
+    .social-item {
+        flex-direction: column;
+    }
+    #youtube {
+        width: 35px;
+        height: 25px;
+    }
+    #music {
+        width: 35px;
+        height: 35px;
+    }
+    .logo {
+        width: 135px; height: 135px;
+    }
+    #title {
+        font-size: 15px;
+    }
+    .about-title {
+        font-size: 15px;
+    }
+    .team-container {
+        grid-template-columns: repeat(auto-fit, minmax(50px, 195px));
+    }
+    .team-title {
+        font-size: 15px;
+    }
+    .member-image {
+        width: 180px;
+        height: fit-content;
+        align-self: center;
+    }
+    .member-name {
+        font-size: 12px;
+    }
+    .member-title {
+        font-size: 15px;
     }
 }

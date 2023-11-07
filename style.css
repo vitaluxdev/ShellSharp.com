@@ -164,11 +164,9 @@ a:hover {
     justify-content: center;
 }
 @media (max-width: 600px) {
-    .about-me {
-        font-size: 12px; /* Adjust the font size for mobile */
-    }
     .about {
         overflow-y: scroll;
+        font-size: 13px;
     }
     .subtext {
         font-size: 8px;

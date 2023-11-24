@@ -1,90 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RoughlySmoothStudios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About | Roughly Smooth Studios</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="RSSLogo.svg">
-    <link rel="canonical" href="https://www.roughlysmoothstudios.com">
+    <script src="app.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="RSSLogo.svg"> 
 </head>
 <body>
-    <div class="sidebar">
-        <img src="RSSLogo.svg" class="logo">
-        <h4 id="title">Roughly Smooth<br>Studios</h4>
-        <div class="socials">
-            <div class="social-item">
-                <div class="social-image">
-                    <a href="https://www.youtube.com/@RoughlySmoothStudios">
-                        <img src="youtube.png" id="youtube" class="image">
-                    </a>
+    <!--Side panel-->
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="close-menu" onclick="closeNav()">&times;</a>
+        <a href="/">Home</a>
+        <a href="games">Games</a>
+    </div>
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="title">
+            <a href="/" style="text-decoration: none; color: white;">
+                <div class="name">
+                    <img src="RSSLogo.svg">
+                    <p>Roughly Smooth Studios</p>
                 </div>
-                <div class="social-name">
-                    <a href="https://www.youtube.com/@RoughlySmoothStudios">
-                        <p style="margin: 0px;">Youtube</p>
-                    </a>
-                </div>
-            </div>
-            <div class="social-item">
-                <div class="social-image">
-                    <a href="https://www.youtube.com/@OdysseyDevMusic">
-                        <img src="music.png" id="music" class="image">
-                    </a>
-                </div>
-                <div class="social-name">
-                    <a href="https://www.youtube.com/@OdysseyDevMusic">
-                        <p style="margin: 0px;">Music</p>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="contact">
-            <a href="mailto:odysseydev@roughlysmoothstudios.com">
-                <p class="contact-us">Contact Us</p>
             </a>
         </div>
+        <button class="open-menu" onclick="openNav()">
+            <img src="menu-icon.png" style="width: 25px;">
+        </button>
     </div>
-    <div class="main">
-        <div class="about">
-            <div class="about-title">
-                <p style="margin: 10px;">About Us</p>
-            </div>
-            <p style="margin: 0px; margin: 10px;">We are Roughly Smooth Studios, a small group created to develop and release games, and make music.<br><br>    
-            A game we were working on titled "SOLACE" (pronounced saw-las) is no longer in development as our lead developer OdysseyDev has lost motivation for the game due to scope creep, and is now looking to increase his experience by making several smaller and less complicated games.<br><br>
-            Unfourtunately we are unable to upload to the youtube channel often as our editor is very busy. But we are hoping to upload before January.
-            </p>
-        </div>
-        <div class="team">
-            <div class="team-title">
-                <p style="margin: 10px;">Roughly Smooth Studios Team</p>
-               </div>
-            <div class="team-box">
-                <div class="team-container">
-                    <div class="team-member">
-                        <div class="member-name">
-                            <p style="margin: 0px;">OdysseyDev</p>
-                        </div>
-                        <div class="member-image">
-                            <img src="OdysseyDev.png" style="width: 70%; height: fit-content; border-radius: 10px;">
-                        </div>
-                        <div class="member-title">
-                            <p style="margin: 0px;">Everything</p>
-                        </div>
-                    </div>
-                    <div class="team-member">
-                        <div class="member-name">
-                            <p style="margin: 0px;">Turio</p>
-                        </div>
-                        <div class="member-image">
-                            <img src="Turio.jpeg" style="width: 70%; height: fit-content; border-radius: 10px;">
-                        </div>
-                        <div class="member-title">
-                            <p style="margin: 0px;">Lead Music Producer and 3D Animator</p>
-                        </div>
-                    </div>
+    <div class="glow-light"></div>
+
+    <p class="description">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Roughly Smooth Studios is a small group of individuals passionate for the realm of games and music.
+        We shoot to make moving games that you wont get bored of.
+        We share our development progress through youtube devlogs, even if we dont upload consistently.
+        At this time we do not have any games released, as we are learning a new engine.. Unity was mean >:(
+    </p>
+    <div class="team">
+        <p class="team-title">ROUGHLY SMOOTH<br>TEAM</p>
+        <div class="team-container">
+            <div class="team-member">
+                <div class="member-image">
+                    <img src="OdysseyDev.png">
                 </div>
+                <h3 class="member-name">OdysseyDev</h3>
+                <p class="member-title">Game Designer/Programmer and Music Producer</p>
+                <p class="member-social">
+                    <a href="https://twitter.com/OdysseyDev_">
+                        @OdysseyDev_
+                    </a>
+                </p>
+                <p class="member-email">odysseydev@roughlysmoothstudios.com</p>
             </div>
+            <div class="team-member">
+                <div class="member-image">
+                    <img src="Turio.png">
+                </div>
+                <h3 class="member-name">Turio</h3>
+                <p class="member-title">Lead Animator and Lead Music Producer</p>
+                <p class="member-social">
+                    <a href="https://twitter.com/AnimatesTurio">
+                        @AnimatesTurio
+                    </a>
+                </p>
+                <p class="member-email">turio@roughlysmoothstudios.com</p>
+            </div>
+            <div class="team-member">
+                <div class="member-image">
+                    <img src="easfrq.gif">
+                </div>
+                <h3 class="member-name">Easfrq</h3>
+                <p class="member-title">Game Tester</p>
+                <p class="member-social">
+                    <a href="https://easfrq.live/">
+                        @Easfrq
+                    </a>
+                </p>
+                <p class="member-email">easfrq@easfrq.live</p>
+            </div>
+        </div>
+    </div>
+    <div class="glow-light-2"></div>
+    <div class="footer">
+        <div class="rss-socials">
+            <a href="https://youtube.com/@roughlysmoothstudios">
+                <img src="youtube.png">
+            </a>
+            <a href="https://twitter.com/@RSStudios__">
+                <img src="twitter.png">
+            </a>
+            <a href="https://discord.gg/invitecode">
+                <img src="discord.png">
+            </a>
+            <a href="mailto:roughlysmoothstudios@gmail.com">
+                <img src="email.png">
+            </a>
+        </div>
+        <div class="copyright">
+            <p>@ 2023 Roughly Smooth Studios</p>
         </div>
     </div>
 </body>
-</html>
+</html> 

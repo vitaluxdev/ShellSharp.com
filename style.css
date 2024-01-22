@@ -46,7 +46,7 @@ p {
   user-select: none;
 }
 .name img {
-  height: 80px;
+  height: 60px;
   padding: 10px;
 }
 /* The sidepanel menu */
@@ -127,7 +127,7 @@ p {
 .description {
   width: auto;
   font-size: 35px;
-  padding-inline: 20%;
+  padding-inline: 8%;
   padding-top: 8%;
   padding-bottom: 10%;
   font-family: Ubuntu-Regular;
@@ -170,20 +170,20 @@ p {
 .team-container {
   padding-inline: 2.5%;
   padding-block: 2.5%;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(10px, 31%));
+  display: flex;
   gap: 2.5%;
   justify-content: center;
 }
 .team-member {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items:start;
   text-align: center;
   padding-bottom: 2.5%;
   background-color: black;
   border-radius: 10px;
   overflow: hidden;
+  width: 33%;
 }
 .member-image {
   width: 100%;
@@ -191,36 +191,47 @@ p {
 .member-image img {
   width: 100%;
 }
+.member-header {
+  width: 100%;
+  padding-top: 5%;
+  display: flex;
+  align-items: center;
+}
 .member-name {
   font-family: Ubuntu-Regular;
   margin: 0;
-  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: auto;
   font-size: 28px;
-  width: 100%;
   text-shadow: 0px 0px 9px rgb(0, 110, 255);
+  animation: shadowChange 0.75s ease-in-out;
+}
+.member-quote {
+  margin-right: 5%;
+  font-size: 20px;
+  text-shadow: 0px 0px 6.5px rgb(0, 110, 255);
   animation: shadowChange 0.75s ease-in-out;
 }
 .member-title {
   font-family: Ubuntu-Regular;
   margin: 0;
   margin-top: 5%;
-  font-size: 20px;
-  width: 100%;
-  text-shadow: 0px 0px 6.5px rgb(0, 110, 255);
+  margin-left: 5%;
+  font-size: 40px;
+  text-shadow: 0px 0px 12px rgb(0, 110, 255);
   animation: shadowChange 0.75s ease-in-out;
 }
 .member-social {
   font-family: Ubuntu-Regular;
   font-size: 20px;
   margin: 0;
-  margin-top: 5%;
-  width: 100%;
+  margin-left: 5%;
 }
 .member-email {
   font-family: Ubuntu-Regular;
   font-size: 20px;
   margin: 0;
-  margin-bottom: 5%;
+  margin-left: 5%;
   text-shadow: 0px 0px 6.5px rgb(0, 110, 255);
   animation: shadowChange 0.75s ease-in-out;
 }
@@ -232,6 +243,7 @@ p {
   animation: blueChange 0.75s ease-in-out;
 }
 .footer {
+  height: 80px;
   background-color: black;
   border-top: white solid;
   animation: borderChange 1s ease-in-out;

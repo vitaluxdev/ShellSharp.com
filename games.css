@@ -42,7 +42,7 @@ p {
   user-select: none;
 }
 .name img {
-  height: 80px;
+  height: 60px;
   padding: 10px;
 }
 /* The sidepanel menu */
@@ -123,8 +123,8 @@ p {
 }
 .sad {
   width: auto;
+  margin-top: auto;
   font-size: 60px;
-  padding-top: 8%;
   font-family: Ubuntu-Regular;
   text-align: center;
   text-shadow: 0px 0px 11px rgb(0, 110, 255);
@@ -145,6 +145,7 @@ footer {
   margin-top: auto;
 }
 .footer {
+  height: 80px;
   background-color: black;
   border-top: white solid;
   animation: borderChange 1s ease-in-out;

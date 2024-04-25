@@ -42,11 +42,11 @@ p {
 .name {
   display: flex;
   align-items: center;
-  font-size: 45px;
+  font-size: 35px;
   user-select: none;
 }
 .name img {
-  height: 80px;
+  height: 60px;
   padding: 10px;
 }
 /* The sidepanel menu */
@@ -276,7 +276,6 @@ p {
   display: flex;
   align-items: center;
   padding-inline: 10px;
-  background-color: blue;
 }
 .copyright p {
   margin: 0;
@@ -332,6 +331,6 @@ p {
     width: 100%;
   }
   .rss-socials img {
-    width: 40px;
+    width: 35px;
   }
 }

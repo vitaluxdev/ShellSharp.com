@@ -84,7 +84,6 @@ p {
   font-size: 36px;
   margin-left: 50px;
 }
-  
   /* Style the button that is used to open the sidepanel */
 .open-menu {
   cursor: pointer;
@@ -96,9 +95,11 @@ p {
   margin: 0px;
   transition: 0.125s;
 }
-  
 .open-menu:hover {
   background-color: rgba(0, 64, 148, 0.5);
+}
+.menu {
+  width: 25px;
 }
 .glow-light {
   height: 80px;
@@ -151,6 +152,7 @@ footer {
   animation: borderChange 1s ease-in-out;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .rss-socials {
   margin: 10px;
@@ -185,11 +187,49 @@ footer {
     opacity: 1;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 900px) {
+  .name {
+    font-size: 35px;
+  }
+  .name img {
+    height: 60px;
+  }
+  .menu {
+    width: 20px;
+  }
+  .description {
+    font-size: 25px;
+    padding-inline: 10%;
+  }
+  .team-title {
+    font-size: 50px;
+  }
+  .team-member {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
   .name {
     font-size: 26px;
   }
   .name img {
     height: 50px;
+  }
+  .description {
+    font-size: 20px;
+    padding-inline: 10%;
+  }
+  .team-title {
+    font-size: 35px;
+  }
+  .team-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .team-member {
+    width: 100%;
+  }
+  .rss-socials img {
+    width: 35px;
   }
 }

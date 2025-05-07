@@ -2,6 +2,14 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="ShellSharp" property="og:title">
+    <meta content="The official homepage of ShellSharp." property="og:description">
+    <meta content="https://shellsharp.com/" property="og:url">
+    <meta property="og:image" content="https://shellsharp.com/SSLogo.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="256">
+    <meta property="og:image:height" content="256">
+    <meta content="#ffffff" data-react-helmet="true" name="theme-color">
     <title>Home | ShellSharp</title>
     <link rel="stylesheet" href="style.css">
     <script src="app.js"></script>
@@ -10,87 +18,94 @@
 <body>
     <!--Side panel-->
     <div id="mySidepanel" class="sidepanel">
-        <a href="javascript:void(0)" class="close-menu" onclick="closeNav()">&times;</a>
         <a href="/">Home</a>
         <a href="games">Games</a>
     </div>
     <!-- TOP BAR -->
-    <div class="top-bar">
+    <div id="top-bar">
         <div class="title">
             <a href="/" style="text-decoration: none; color: white;">
                 <div class="name">
                     <img src="SSLogo.svg">
-                    <p>ShellSharp</p>
+                    <p id="name-txt">ShellSharp</p>
                 </div>
             </a>
         </div>
-        <button class="open-menu" onclick="openNav()">
-            <img class="menu" src="menu-icon.png">
+        <button class="menu-toggle" onclick="toggleNav()">
+            <img class="menu" id="menuImage" src="menu-icon.png">
         </button>
     </div>
-    <div class="glow-light"></div>
 
-    <p class="description">ShellSharp is a small group of individuals passionate for the realm of games.
-        We shoot to make unique games that you wont get bored of.
-        We share our development progress through youtube devlogs, even if we dont upload consistently.
-        At this time we do not have any games released because OdysseyDev is our only developer.
-        Be sure to check the <i>Games</i> tab for updates on game releases.
+    <p class="description">As of now, ShellSharp is an identity created to display games created and developed by Vitalux, who is a young self-taught game developer working to create their first game, Solacuna
     </p>
     <div class="team">
-        <p class="team-title">SHELLSHARP<br>TEAM</p>
+        <p class="team-title">ShellSharp Team</p>
         <div class="team-container">
             <div class="team-member">
                 <div class="member-image">
-                    <img src="OdysseyDev.png">
+                    <img src="VitaluxPFP.png">
                 </div>
-                <div class="member-header">
-                    <h3 class="member-name">OdysseyDev</h3>
-                    <p class="member-quote">"Wineboom"</p>
+                <div class="member-description">
+                    <div class="member-block">
+                        <h3 class="member-label">Name:</h3>
+                        <h3 class="member-name">Vitalux</h3>
+                    </div>
+                    <div class="member-block">
+                        <h3 class="member-label">Role:</h3>
+                        <p class="member-role">Everything</p>
+                    </div>
+                    <div class="member-block">
+                        <h3 class="member-label">Contact:</h3>
+                        <h3 class="member-email">vitalux@shellsharp.com</h3>
+                    </div>
                 </div>
-                <p class="member-social">
-                    <a href="https://twitter.com/OdysseyDev_">
-                        @OdysseyDev_
-                    </a>
-                </p>
-                <p class="member-email">odysseydev@shellsharp.com</p>
-                <p class="member-title">Game Design</p>
             </div>
             <div class="team-member">
                 <div class="member-image">
-                    <img src="easfrq.gif">
+                    <img src="Turio.png">
                 </div>
-                <div class="member-header">
-                    <h3 class="member-name">Easfrq</h3>
-                    <p class="member-quote">"Doing things since 1847"</p>
+                <div class="member-description">
+                    <div class="member-block">
+                        <h3 class="member-label">Name:</h3>
+                        <h3 class="member-name">Turio</h3>
+                    </div>
+                    <div class="member-block">
+                        <h3 class="member-label">Role:</h3>
+                        <p class="member-role">Music Design</p>
+                    </div>
+                    <div class="member-block">
+                        <h3 class="member-label">Contact:</h3>
+                        <h3 class="member-email">turio@shellsharp.com</h3>
+                    </div>
                 </div>
-                <p class="member-social">
-                    <a href="https://easfrq.com/">
-                        @Easfrq
-                    </a>
-                </p>
-                <p class="member-email">macintoshing26@outlook.com</p>
-                <p class="member-title">Game Tester</p>
+            </div>
+        </div>
+        <div class="game-testers">
+            <div class="testers-title">
+                Game Testers
+            </div>
+            <div class="tester-container">
+                <div class="tester">
+                    <p class="tester-name">Easfrq</p>
+                </div>
+                <div class="tester">
+                    <p class="tester-name">A€ED</p>
+                </div>
             </div>
         </div>
     </div>
-    <div class="glow-light-2"></div>
+    
     <div class="footer">
-        <div class="rss-socials">
+        <div class="ss-socials">
             <a href="https://youtube.com/@shellsharpinc.">
-                <img src="youtube.png">
-            </a>
-            <a href="https://twitter.com/@RSStudios__">
-                <img src="twitter.png">
+                <img class="ss-image" src="youtube.png">
             </a>
             <a href="https://discord.gg/ruRsDhWqpQ">
-                <img src="discord.png">
-            </a>
-            <a href="mailto:roughlysmoothstudios@gmail.com">
-                <img src="email.png">
+                <img class="ss-image" src="discord.png">
             </a>
         </div>
         <div class="copyright">
-            <p>@ 2024 ShellSharp Inc.</p>
+            <p>@ 2025 ShellSharp Inc. (unofficial)</p>
         </div>
     </div>
 </body>

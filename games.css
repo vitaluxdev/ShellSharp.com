@@ -1,17 +1,14 @@
 html {
-  font-family: Ubuntu-Bold;
+  font-family: Tomorrow-Semibold;
+  height: 100%;
 }
 @font-face {
-  font-family: Ubuntu-Bold;
-  src: url(Ubuntu-Bold.ttf);
+  font-family: Tomorrow-Semibold;
+  src: url(Tomorrow-SemiBold.ttf);
 }
 @font-face {
-  font-family: Ubuntu-Regular;
-  src: url(Ubuntu-Regular.ttf);
-}
-@font-face {
-  font-family: Ubuntu-Light;
-  src: url(Ubuntu-Light.ttf);
+  font-family: Tomorrow-Regular;
+  src: url(Tomorrow-Regular.ttf);
 }
 body {
   background-color: rgb(21,21,21);
@@ -20,50 +17,55 @@ body {
   margin: 0;
   padding: 0;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100%;
+}
+.body-light-mode {
+  background-color: rgb(234,234,234);
+  color:black;
 }
 p {
   margin: 0;
   padding: 0;
 }
-.top-bar {
+#top-bar {
   display: flex;
   width: 100%;
-  background-color: black;
+  height: 65px;
   justify-content: space-between;
-  border-bottom: white;
-  border-bottom-style: solid;
-  animation: borderChange 1s ease-in-out;
+  background: black;
+  z-index: 1;
 }
 .name {
   display: flex;
   align-items: center;
-  font-size: 35px;
   user-select: none;
+  height: 65px;
+}
+.name p {
+  font-size: 27.5px;
 }
 .name img {
-  height: 60px;
-  padding: 10px;
+  height: 40px;
+  padding: 12.5px;
 }
 /* The sidepanel menu */
 .sidepanel {
-  height: 100%; /* Specify a height */
   width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
+  position: absolute; /* Stay in place */
   z-index: 1; /* Stay on top */
   top: 0;
   right: 0;
-  background-color: #000000; /* Black*/
+  background-color: black; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
-  padding-bottom: 100%;
   border-right-width: 0px;
+  border-radius: 0 0 0 10px;
 }
   
   /* The sidepanel links */
 .sidepanel a {
-  padding: 8px 8px 8px 32px;
+  padding: 16px 16px 16px 16px;
   text-decoration: none;
   font-size: 25px;
   color: #f1f1f1;
@@ -73,19 +75,11 @@ p {
   
   /* When you mouse over the navigation links, change their color */
 .sidepanel a:hover {
-  color: #818181;
+  background-color: rgba(0, 64, 148, 0.5);
 }
-  
-  /* Position and style the close button (top right corner) */
-.sidepanel .close-menu {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  font-size: 36px;
-  margin-left: 50px;
-}
+
   /* Style the button that is used to open the sidepanel */
-.open-menu {
+.menu-toggle {
   cursor: pointer;
   color: white;
   background-color: transparent;
@@ -94,142 +88,86 @@ p {
   user-select: none;
   margin: 0px;
   transition: 0.125s;
+  z-index: 1;
 }
-.open-menu:hover {
+.menu-toggle:hover {
   background-color: rgba(0, 64, 148, 0.5);
 }
 .menu {
   width: 25px;
 }
-.glow-light {
-  height: 80px;
-  background: linear-gradient(rgba(0, 64, 148, 0.5) 0%, transparent 80%);
-  animation: gradientChange 0.75s ease-in-out;
-}
-@keyframes gradientChange {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes borderChange {
-  0% {
-    border-color: rgb(75, 75, 75);
-  }
-  100% {
-    border-color: white;
-  }
-}
+
 .sad {
-  width: auto;
-  margin-top: auto;
-  font-size: 60px;
-  font-family: Ubuntu-Regular;
-  text-align: center;
-  text-shadow: 0px 0px 11px rgb(0, 110, 255);
-  color: white;
-  animation: shadowChange 0.75s ease-in-out;
-}
-@keyframes shadowChange {
-  0% {
-    text-shadow: 0px 0px 0px rgba(0, 110, 255, 0);
-    color: rgb(75, 75, 75);
-  }
-  100% {
-    text-shadow: 0px 0px 10px rgb(0, 110, 255);
-    color: white;
-  }
-}
-footer {
-  margin-top: auto;
-}
-.footer {
-  height: 80px;
-  background-color: black;
-  border-top: white solid;
-  animation: borderChange 1s ease-in-out;
   display: flex;
-  justify-content: space-between;
+  margin-top: auto;
+  justify-content: center;
   align-items: center;
+  font-size: 30px;
 }
-.rss-socials {
-  margin: 10px;
-  display: flex;
+.sad a {
+  text-decoration: none;
+  color: white;
 }
-.rss-socials img {
-  width: 50px;
-  margin: 5px;
+.sad a:hover {
+  color: rgb(0, 89, 206);
+}
+.sad p:hover {
+  transform: scale(102.5%);
+  transition: 0.5s;
+}
+
+.footer {
+  width: 100%; height: auto;
+  display: flex; justify-content: space-between;
+  background-color: rgb(0, 0, 0);
+  padding-bottom: 10px; padding-top: 10px;
+  margin-top: auto;
+}
+.ss-socials {
+  display: flex; justify-content: center; align-items: center; gap: 10px;
+  width: auto; margin-left: 10px;
+  background-color: black;
+}
+.ss-socials a {
+  display: flex; justify-content: center; height: center;
+  /*background-color: blue;*/
+}
+.ss-image {
+  width: 50px; height: 50px;
+  /*background-color: red;*/
   transition: 0.3s;
 }
-.rss-socials img:hover {
+.ss-image:hover {
   transform: scale(1.125);
 }
-.glow-light-2 {
-  height: 80px;
-  background: linear-gradient(0turn, rgba(0, 64, 148, 0.5) 0%, transparent 80%);
-  animation: gradientChange2 0.75s ease-in-out;
-}
 .copyright {
-  display: flex;
-  align-items: center;
-  padding-inline: 10px;
+  display: flex; justify-content: center; align-items: center; padding-inline: 10px;
 }
-.copyright p {
-  margin: 0;
-}
-@keyframes gradientChange2 {
-  0% {
-    opacity: 0;
+@media (max-width: 700px) {
+  #top-bar {
+    height: 50px;
   }
-  100% {
-    opacity: 1;
-  }
-}
-@media (max-width: 900px) {
   .name {
-    font-size: 35px;
+    height: 50px;
+  }
+  .name p {
+    font-size: 20px;
   }
   .name img {
-    height: 60px;
+    height: 30px;
+  }
+  .sidepanel {
+    padding-top: 50px;
+  }
+  .menu-toggle {
+    padding-inline: 15px;
   }
   .menu {
     width: 20px;
   }
-  .description {
-    font-size: 25px;
-    padding-inline: 10%;
-  }
-  .team-title {
-    font-size: 50px;
-  }
-  .team-member {
-    width: 100%;
-  }
-}
-@media (max-width: 600px) {
-  .name {
-    font-size: 26px;
-  }
-  .name img {
-    height: 50px;
-  }
-  .description {
-    font-size: 20px;
-    padding-inline: 10%;
-  }
-  .team-title {
-    font-size: 35px;
-  }
-  .team-container {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .team-member {
-    width: 100%;
-  }
-  .rss-socials img {
-    width: 35px;
+  .ss-image {
+    margin: 5px;
+    height: 30px;
+    width: 30px;
   }
 }

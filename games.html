@@ -4,51 +4,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Games | ShellSharp</title>
     <link rel="stylesheet" href="games.css">
-    <script src="games.js"></script>
+    <script src="app.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="SSLogo.svg"> 
 </head>
 <body>
     <!--Side panel-->
     <div id="mySidepanel" class="sidepanel">
-        <a href="javascript:void(0)" class="close-menu" onclick="closeNav()">&times;</a>
         <a href="/">Home</a>
         <a href="games">Games</a>
     </div>
     <!-- TOP BAR -->
-    <div class="top-bar">
-        <a href="/" style="text-decoration: none; color: white;">
-            <div class="name">
-                <img src="SSLogo.svg">
-                <p>ShellSharp</p>
-            </div>
-        </a>
-        <button class="open-menu" onclick="openNav()">
-            <img src="menu-icon.png" style="width: 25px;">
+    <div id="top-bar">
+        <div class="title">
+            <a href="/" style="text-decoration: none; color: white;">
+                <div class="name">
+                    <img src="SSLogo.svg">
+                    <p id="name-txt">ShellSharp</p>
+                </div>
+            </a>
+        </div>
+        <button class="menu-toggle" onclick="toggleNav()">
+            <img class="menu" id="menuImage" src="menu-icon.png">
         </button>
     </div>
-    <div class="glow-light"></div>
-    <p class="sad">No games yet :(</p>
-    <footer>
-        <div class="glow-light-2"></div>
-        <div class="footer">
-            <div class="rss-socials">
-                <a href="https://youtube.com/@ShellSharpInc.">
-                    <img src="youtube.png">
-                </a>
-                <a href="https://twitter.com/@RSStudios__">
-                    <img src="twitter.png">
-                </a>
-                <a href="https://discord.gg/ruRsDhWqpQ">
-                    <img src="discord.png">
-                </a>
-                <a href="mailto:roughlysmoothstudios@gmail.com">
-                    <img src="email.png">
-                </a>
-            </div>
-            <div class="copyright">
-                <p>@ 2024 ShellSharp Inc.</p>
-            </div>
+    <div class="sad">
+        <p>Test Solacuna at <a href="https://vitalux.itch.io/solacuna">vitalux.itch.io/solacuna</a></p>
+    </div>
+    <div class="footer">
+        <div class="ss-socials">
+            <a href="https://youtube.com/@shellsharpinc.">
+                <img class="ss-image" src="youtube.png">
+            </a>
+            <a href="https://discord.gg/ruRsDhWqpQ">
+                <img class="ss-image" src="discord.png">
+            </a>
         </div>
-    </footer>
+        <div class="copyright">
+            <p>@ 2025 ShellSharp Inc. (unofficial)</p>
+        </div>
+    </div>
 </body>
 </html> 

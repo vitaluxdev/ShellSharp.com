@@ -184,7 +184,7 @@ p {
 .tester-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5%;
+  gap: 10%;
 }
 .testers-title {
   margin-top: 1%;

@@ -1,112 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+
+    <script src="main.js"></script>
+    <script src="jquery.js"></script>
+    <script>
+        $(function(){
+          $("#home").load("/home.html"); 
+        });
+        $(function(){
+          $("#friends").load("/friends.html"); 
+        });
+        $(function(){
+          $("#projects").load("/projects.html"); 
+        });
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Home | ShellSharp</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="SSLogo.svg"> 
+    
+    <!-- Open Graph (social media embed) -->
     <meta content="ShellSharp" property="og:title">
-    <meta content="The official homepage of ShellSharp." property="og:description">
+    <meta content="The official ShellSharp home page" property="og:description">
     <meta content="https://shellsharp.com/" property="og:url">
     <meta property="og:image" content="https://shellsharp.com/SSLogo.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="256">
     <meta property="og:image:height" content="256">
-    <meta content="#ffffff" data-react-helmet="true" name="theme-color">
-    <title>Home | ShellSharp</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
-    <link rel="shortcut icon" type="image/x-icon" href="SSLogo.svg"> 
 </head>
 <body>
-    <!--Side panel-->
-    <div id="mySidepanel" class="sidepanel">
-        <a href="/">Home</a>
-        <a href="games">Games</a>
-    </div>
-    <!-- TOP BAR -->
-    <div id="top-bar">
-        <div class="title">
-            <a href="/" style="text-decoration: none; color: white;">
-                <div class="name">
-                    <img src="SSLogo.svg">
-                    <p id="name-txt">ShellSharp</p>
+    <div class="pageContents">
+        <div class="navBar">
+            <button class="titleButton">
+                <img id="logo" src="Img/SSLogo.svg">
+                <div class="siteTitle">
+                    <p id="title">ShellSharp</p>
+                    <p id="extension">.com</p>
                 </div>
-            </a>
-        </div>
-        <button class="menu-toggle" onclick="toggleNav()">
-            <img class="menu" id="menuImage" src="menu-icon.png">
-        </button>
-    </div>
-
-    <p class="description">ShellSharp is a team of people working to develop and publish games. The logo for ShellSharp was created before it's name, because it looks like a sharp shell.
-    </p>
-    <div class="team">
-        <p class="team-title">ShellSharp Team</p>
-        <div class="team-container">
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="Vitalux.jpg">
-                </div>
-                <div class="member-description">
-                    <div class="member-block">
-                        <h3 class="member-label">Name:</h3>
-                        <h3 class="member-name">Vitalux</h3>
-                    </div>
-                    <div class="member-block">
-                        <h3 class="member-label">Role:</h3>
-                        <p class="member-role">Lead All</p>
-                    </div>
-                    <div class="member-block">
-                        <h3 class="member-label">Contact:</h3>
-                        <h3 class="member-email">vitalux@shellsharp.com</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="team-member">
-                <div class="member-image">
-                    <img src="Turio.png">
-                </div>
-                <div class="member-description">
-                    <div class="member-block">
-                        <h3 class="member-label">Name:</h3>
-                        <h3 class="member-name">Turio</h3>
-                    </div>
-                    <div class="member-block">
-                        <h3 class="member-label">Role:</h3>
-                        <p class="member-role">Music Design</p>
-                    </div>
-                    <div class="member-block">
-                        <h3 class="member-label">Contact:</h3>
-                        <h3 class="member-email">turio@shellsharp.com</h3>
-                    </div>
-                </div>
+            </button>
+            <div class="separator"></div>
+            <div class="pages">
+                <button id="buttonHome" onmousedown="pageHome()" class="pageButton-active">
+                    <p>Home</p>
+                </button>
+                <button id="buttonFriends" onmousedown="pageFriends()" class="pageButton">
+                    <p>Friends</p>
+                </button>
+                <button id="buttonProjects" onmousedown="pageProjects()" class="pageButton">
+                    <p>Projects</p>
+                </button>
             </div>
         </div>
-        <div class="game-testers">
-            <div class="testers-title">
-                Game Testers
-            </div>
-            <div class="tester-container">
-                <div class="tester">
-                    <p class="tester-name">Easfrq</p>
-                </div>
-                <div class="tester">
-                    <p class="tester-name">A€ED</p>
-                </div>
-            </div>
+        <div class="section">
+            <div style="display: block;" id="home"></div>
+            <div style="display: none;" id="friends"></div>
+            <div style="display: none;" id="projects"></div>
         </div>
-    </div>
-    
-    <div class="footer">
-        <div class="ss-socials">
-            <a href="https://youtube.com/@shellsharpinc.">
-                <img class="ss-image" src="youtube.png">
-            </a>
-            <a href="https://discord.gg/ruRsDhWqpQ">
-                <img class="ss-image" src="discord.png">
-            </a>
-        </div>
-        <div class="copyright">
-            <p>@ 2025 ShellSharp Inc. (unofficial)</p>
+        <div class="footer">
+            <!-- <img id="sizeSetter"> -->
         </div>
     </div>
 </body>
-</html> 
+</html>

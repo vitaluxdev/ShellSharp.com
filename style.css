@@ -1,264 +1,615 @@
-html {
-  font-family: Tomorrow-Semibold;
-  height: 100%;
+html, body {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 0;
+    margin: 0;
 }
+.pageContents {
+    background-image: url(Img/bgnoise_lg.png);
+    background-color: rgb(60, 60, 61);
+    background-blend-mode: color-burn;
+
+    box-sizing: border-box;
+    min-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
 @font-face {
-  font-family: Tomorrow-Semibold;
-  src: url(Tomorrow-SemiBold.ttf);
+    font-family: Ubuntu;
+    src: url(Ubuntu-Regular.ttf);
 }
+
 @font-face {
-  font-family: Tomorrow-Regular;
-  src: url(Tomorrow-Regular.ttf);
+    font-family: Ubuntu;
+    src: url(Ubuntu-Medium.ttf);
+    font-weight: bold;
 }
-body {
-  background-color: rgb(21,21,21);
-  display: flex;
-  color: white;
-  margin: 0;
-  padding: 0;
-  flex-direction: column;
-  min-height: 100%;
-}
-.body-light-mode {
-  background-color: rgb(234,234,234);
-  color:black;
-}
+
 p {
-  margin: 0;
-  padding: 0;
-}
-#top-bar {
-  display: flex;
-  width: 100%;
-  height: 65px;
-  justify-content: space-between;
-  background: black;
-  z-index: 1;
-}
-.name {
-  display: flex;
-  align-items: center;
-  user-select: none;
-  height: 65px;
-}
-.name p {
-  font-size: 27.5px;
-}
-.name img {
-  height: 40px;
-  padding: 12.5px;
-}
-/* The sidepanel menu */
-.sidepanel {
-  width: 0; /* 0 width - change this with JavaScript */
-  position: absolute; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0;
-  right: 0;
-  background-color: black; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
-  border-right-width: 0px;
-  border-radius: 0 0 0 10px;
-}
-  
-  /* The sidepanel links */
-.sidepanel a {
-  padding: 16px 16px 16px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #f1f1f1;
-  display: block;
-  transition: 0.3s;
-}
-  
-  /* When you mouse over the navigation links, change their color */
-.sidepanel a:hover {
-  background-color: rgba(0, 64, 148, 0.5);
+    padding: 0;
+    margin: 0;
+    font-size: 10vh;
+
+    font-family: Ubuntu;
 }
 
-  /* Style the button that is used to open the sidepanel */
-.menu-toggle {
-  cursor: pointer;
-  color: white;
-  background-color: transparent;
-  padding-inline: 20px;
-  border: none;
-  user-select: none;
-  margin: 0px;
-  transition: 0.125s;
-  z-index: 1;
-}
-.menu-toggle:hover {
-  background-color: rgba(0, 64, 148, 0.5);
-}
-.menu {
-  width: 25px;
-}
-.description {
-  width: auto;
-  font-size: 40px;
-  padding-inline: 20%;
-  padding-top: 8%;
-  padding-bottom: 14%;
-  font-family: Tomorrow-Regular;
-  color: white;
-}
-.team {
-  width: 100%; height: auto;
-  margin-bottom: 10%;
-}
-.team-title {
-  margin-top: 1%;
-  font-family: Tomorrow-Regular;
-  font-size: 65px;
-  text-align: center;
-  color: white;
-}
-.team-container {
-  padding-inline: 10%;
-  padding-block: 2.5%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2%;
-}
-.team-member {
-  margin: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
-}
-.member-image {
-  width: 100%;
-}
-.member-image img {
-  width: 100%;
-  border-radius: 2.5%;
-}
-.member-description{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  padding-inline: 5%;
-}
-.member-block {
-  font-family: Tomorrow-Regular;
-  width: 100%;
-  padding-block: 2.5%;
-  margin: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.member-label {
-  font-size: 30px;
-  margin: 0;
-}
-.member-name {
-  font-size: 40px;
-  text-align: right;
-  margin: 0;
-}
-.member-role {
-  font-family: Tomorrow-Regular;
-  margin: 0;
-  font-size: 35px;
-}
-.member-email {
-  font-family: Tomorrow-Regular;
-  font-size: 20px;
-  margin: 0;
+.navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 0;
+    margin: 0;
+
+    background-color: rgb(50, 52, 52);
+    box-shadow: 0 0 30px 15px rgba(0, 0, 0, 0.2);
+
+    height: auto;
+    min-width: 100%;
+
+    transition: linear 100ms;
 }
 
-.game-testers {
-  width: 100%; height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.titleButton {
+    position: relative;
+
+    padding: 10px;
+    margin: 0;
+    
+    background: linear-gradient(to bottom, #2e2f30 0%,#313334 17%,#313334 35%,#2e2f30 81%,#292a2b 100%);
+    color: rgb(245, 245, 245);
+
+    box-sizing: border-box;
+    box-shadow: inset 0 0 10px 5px rgba(1, 1, 1, 0.2);
+    border-color: rgb(46, 48, 49);
+    border-style: groove;
+    border-width: 5px;
+
+    overflow: visible;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    transition: linear 100ms;
 }
-.tester-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10%;
+.titleButton:hover, .titleButton:active {
+    color: white;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    background: linear-gradient(to bottom, #434647 0%,#494c4e 17%,#494c4e 35%,#434747 81%,#404144 100%);
+    border-color: rgb(46, 48, 49);
+    box-shadow: inset 0 0 15px 10px rgba(0, 0, 0, 0.2), 0 0 10px 5px rgba(0, 0, 0, 0.3);
+
+    border-style: outset;
 }
-.testers-title {
-  margin-top: 1%;
-  font-family: Tomorrow-Regular;
-  font-size: 65px;
-  text-align: center;
-  color: white;
+
+.siteTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
 }
-.tester-name {
-  font-family: Tomorrow-Regular;
-  font-size: 40px;
+
+#title {
+    font-weight: bold;
+    font-size: 50px;
+}
+#extension {
+    font-size: 35px;
+}
+#logo {
+    
+    margin-right: 10px;
+    width: 60px;
+}
+
+/* The block inbetween the tab buttons and the siteTitle that only exists for the inset shadow */
+.separator {
+    flex: 1;
+    width: 100%;
+    min-height: 100%;
+
+    border-bottom: solid 5px;
+    border-color: rgb(46, 48, 49);
+    background: linear-gradient(to bottom, #434647 0%,#494c4e 17%,#494c4e 35%,#434747 81%,#404144 100%);
+    box-sizing: border-box;
+    box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Page Selector */
+.pages {
+    max-height: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+}
+
+.pageButton {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    user-select: none;
+
+    border-style:groove;
+    border-color: rgb(46, 48, 49);
+    border-width: 5px;
+
+    padding-inline: 30px;
+    margin: 0;
+    height: 100%;
+    
+    background: linear-gradient(to bottom, #2e2f30 0%,#313334 17%,#313334 35%,#2e2f30 81%,#292a2b 100%);
+    color: rgb(245, 245, 245);
+    box-shadow: inset 0 0 10px 5px rgba(1, 1, 1, 0.2);
+
+    overflow: visible;
+
+    transition: linear 100ms;
+}
+.pageButton:hover {
+    color: white;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    background: linear-gradient(to bottom, #434647 0%,#494c4e 17%,#494c4e 35%,#434747 81%,#404144 100%);
+    box-shadow: inset 0 0 15px 10px rgba(0, 0, 0, 0.2), 0 0 10px 5px rgba(0, 0, 0, 0.3);
+    border-color: rgb(46, 48, 49);
+
+    border-style: outset;
+}
+.pageButton:active {
+    border-style: inset;
+    border-color: rgb(46, 48, 49);
+
+    background: linear-gradient(to bottom, #2e2f30 0%,#313334 17%,#313334 35%,#2e2f30 81%,#292a2b 100%);
+    box-shadow: inset 0 0 15px 10px rgba(105, 105, 105, 0.3), 0 0 10px 5px rgba(160, 160, 160, 0.1);
+}
+.pageButton p {
+    font-size: 30px;
+}
+
+/* While :active is an identifier for the button, .pageButton-active is just 
+a version of the button that cannot be clicked and appears to be pressed down */
+.pageButton-active {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    user-select: none;
+
+    border-style: inset;
+    border-color: rgb(46, 48, 49);
+    border-width: 5px;
+
+    padding-inline: 30px;
+    margin: 0;
+    height: 100%;
+    font-size: 20px;
+    
+    background: linear-gradient(to bottom, #2c2c2d 0%,#313334 17%,#313334 35%,#2c2c2d 81%,#222223 100%);
+    color: rgb(245, 245, 245);
+    box-shadow: inset 0 0 15px 10px rgba(105, 105, 105, 0.3), 0 0 30px 5px rgba(255, 255, 255, 0.171);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+
+    overflow: visible;
+
+    transition: linear 100ms;
+}
+.pageButton-active p {
+    font-size: 30px;
+}
+
+.section {
+    padding-bottom: 100px;
+}
+
+/* Now this is the actual page contents, when making a new page ignore the navbar */
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: rgb(204, 204, 204);
+
+    margin-top: 2.5%;
+    margin-inline: 2.5%;
+}
+.sectionTitle {
+    margin-right: auto;
+    padding-left: 10px;
+    padding-top: 10px;
+
+    font-size: 2vw;
+    font-weight: bold;
+}
+.sectionLine{
+    width: 100%;
+    height: 0;
+    border-bottom: 5px ridge rgb(73, 76, 78);
+    background-color: rgb(204, 204, 204);
+}
+.sectionParagraph {
+    padding-top: 25px;
+    padding-inline: 10px;
+    margin-right: auto;
+
+    font-size: 1.5vw;
+}
+
+.container {
+    display: grid;
+    grid-template: 
+    "a b"
+    "c d";
+}
+.projContainer {
+    display: grid;
+    grid-template: 
+    "a"
+    "b";
+}
+.profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: auto;
+    height: auto;
+    padding: 0;
+}
+.profileImage {
+    margin-right: auto;
+    padding-block: 50px;
+    padding-inline: 50px;
+
+    width: 20vw;
+
+    z-index: 1;
+}
+
+.profileImgButton {
+    user-select: none;
+    display: flex;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+
+    border-color: rgb(46, 48, 49);
+    border-width: 5px;
+    border-style: groove;
+    background-color: transparent;
+
+    box-shadow: inset 0 0 10px 5px rgba(1, 1, 1, 0.3);
+
+    transition: linear 100ms;
+}
+.profileImgButton:hover {
+    border-style: outset;
+    box-shadow: inset 0 0 15px 10px rgba(0, 0, 0, 0.3), 0 0 20px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.profileImgButton img {
+    width: 100%;
+    z-index: -1;
+}
+
+.profileDesc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+.profileName {
+    font-size: 3vw;
+    font-weight: bold;
+    padding-right: 0;
+    background-color: blue;
+}
+.profileTitle {
+    padding-top: 25px;
+    width: 100%;
+    font-size: 2vw;
+}
+
+.profileButton {
+    user-select: none;
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    user-select: none;
+
+    border-style:groove;
+    border-color: rgb(46, 48, 49);
+    border-width: 5px;
+
+    padding-inline: 10%;
+    padding-block: 10%;
+    margin: 0;
+    margin-top: 10%;
+    height: 30%;
+    font-size: 2vw;
+    
+    background: linear-gradient(to bottom, #2e2f30 0%,#313334 17%,#313334 35%,#2e2f30 81%,#292a2b 100%);
+    color: white;
+    box-shadow: inset 0 0 10px 5px rgba(1, 1, 1, 0.2);
+
+    overflow: visible;
+
+    transition: linear 100ms;
+}
+
+.profileButton:hover {
+    background: linear-gradient(to bottom, #434647 0%,#494c4e 17%,#494c4e 35%,#434747 81%,#404144 100%);
+
+    border-style: outset;
+}
+.profileButton:active {
+    border-style: inset;
+}
+
+.profileLink {
+    padding-top: 1.5vw;
+    font-size: 3vw;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: auto;
+    height: auto;
+    margin: 5vw;
+}
+.projectImage {
+
+    width: 80%;
+
+    z-index: 1;
+}
+
+.projectImage button {
+    display: flex;
+    width: 100%;
+    margin: 0vw;
+    padding: 0vw;
+
+    border-color: rgb(46, 48, 49);
+    border-width: 5px;
+    border-style: groove;
+    background-color: transparent;
+
+    box-shadow: inset 0 0 10px 5px rgba(1, 1, 1, 0.3);
+
+    transition: linear 100ms;
+}
+.projectImage button:hover {
+    border-style: outset;
+    box-shadow: inset 0 0 15px 10px rgba(0, 0, 0, 0.3), 0 0 20px 10px rgba(0, 0, 0, 0.3);
+}
+.projectImage button:active {
+    border-style: inset;
+}
+
+.projectImage button img {
+    width: 100%;
+    margin: 0vw;
+    padding: 0vw;
+    z-index: -1;
+}
+.projectDescription {
+    color: white;
+    width: 100%;
+    margin-inline: 25px;
+}
+.projectName {
+    font-size: 3vw;
+    font-weight: bold;
+}
+.projectPara {
+    padding-top: 10px;
+    font-size: 2vw;
 }
 
 .footer {
-  width: 100%; height: auto;
-  display: flex; justify-content: space-between;
-  background-color: rgb(0, 0, 0);
-  padding-bottom: 10px; padding-top: 10px;
+    display: flex;
+
+    align-self: flex-end;
+
+    /*padding-block: 0.75vw;*/
+    margin-top: auto;
+
+    /*box-shadow:  0 0 10px 5px rgba(0, 0, 0, 0.2);*/
+    box-shadow:  0 0 30px 20px rgba(0, 0, 0, 0.2);
+
+    font-size: 10vw;
+
+    /*min-height: 3.25vw;*/
+    min-width: 100vw;
 }
-.ss-socials {
-  display: flex; justify-content: center; align-items: center; gap: 10px;
-  width: auto; margin-left: 10px;
-  background-color: black;
+
+.sizeSetter {
+    width: 2.5vw;
 }
-.ss-socials a {
-  display: flex; justify-content: center; height: center;
-  /*background-color: blue;*/
-}
-.ss-image {
-  width: 50px; height: 50px;
-  /*background-color: red;*/
-  transition: 0.3s;
-}
-.ss-image:hover {
-  transform: scale(1.125);
-}
-.copyright {
-  display: flex; justify-content: center; align-items: center; padding-inline: 10px;
-}
-@media (max-width: 700px) {
-  #top-bar {
-    height: 50px;
-  }
-  .name {
-    height: 50px;
-  }
-  .name p {
-    font-size: 20px;
-  }
-  .name img {
-    height: 30px;
-  }
-  .sidepanel {
-    padding-top: 50px;
-  }
-  .menu-toggle {
-    padding-inline: 15px;
-  }
-  .menu {
-    width: 20px;
-  }
-  .description {
-    font-size: 30px;
-    padding-inline: 10%;
-  }
-  .team-title {
-    font-size: 30pt;
-  }
-  .team-container {
-    grid-template-columns: repeat(2, auto);
-  }
-  .ss-image {
-    margin: 5px;
-    height: 30px;
-    width: 30px;
-  }
+
+@media screen and (max-width: 830px) {
+    .navBar {
+        flex-direction: column;
+    }
+    .titleButton {
+        z-index: 3;
+        font-size: 2vw;
+    }
+    .separator {
+        display: none;
+    }
+    .pages {
+        display: flex;
+        background-color: blue;
+    }
+    .pageButton {
+        padding-block: 20px;
+        width: 33.3333%;
+    }
+    .pageButton p {
+        font-size: 20px;
+    }
+    .pageButton-active {
+        padding-block: 20px;
+        width: 33.3333%;
+    }
+    .pageButton-active p {
+        font-size: 20px;
+    }
+    #logo {
+        width: 50px;
+    }
+    #title {
+        font-size: 40px;
+    }
+    #extension {
+        font-size: 30px;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        color: rgb(204, 204, 204);
+
+        margin-top: 10px;
+        margin-inline: 10px;
+    }
+    .sectionTitle {
+        margin-right: auto;
+        padding-left: 10px;
+        padding-top: 10px;
+
+        font-size: 4.5vw;
+        font-weight: bold;
+    }
+    .sectionLine{
+        width: 100%;
+        height: 0;
+        border-bottom: 5px ridge rgb(73, 76, 78);
+        background-color: rgb(204, 204, 204);
+    }
+    .sectionParagraph {
+        padding-top: 25px;
+        padding-inline: 10;
+        margin-right: auto;
+
+        font-size: 3.5vw;
+    }
+
+    .container {
+        display: grid;
+        grid-template:
+        "a"
+        "b"
+        "c"
+        "d";
+    }
+    .profileImage {
+        width: 50vw;
+    }
+    .profileDesc {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        
+        color: white;
+        width: 100%;
+        height: 100%;
+    }
+    .profileName {
+        font-size: 6vw;
+        font-weight: bold;
+        padding-right: 0;
+    }
+    .profileTitle {
+        padding-top: 25px;
+        width: 100%;
+        font-size: 4vw;
+    }
+
+    .profileButton {
+        padding-inline: 10%;
+        padding-block: 0;
+        margin-top: 5%;
+        font-size: 4vw;
+        
+        background: linear-gradient(to bottom, #2e2f30 0%,#313334 17%,#313334 35%,#2e2f30 81%,#292a2b 100%);
+        color: white;
+        box-shadow: inset 0 0 10px 5px rgba(1, 1, 1, 0.2);
+
+        overflow: visible;
+
+        transition: linear 100ms;
+    }
+
+    .project {
+        display: grid;
+        grid-template: 
+        "a"
+        "b";
+        
+        margin: 0;
+        padding: 50px;
+    }
+    .projectImage {
+        width: 100%;
+        margin-right: auto;
+        background-color: pink;
+
+        z-index: 1;
+    }
+    .projectImage button img {
+        width: 100%;
+        z-index: -1;
+    }
+    .projectDescription {
+        color: white;
+        width: 100%;
+
+        padding: 0;
+        margin: 0;
+    }
+    .projectName {
+        
+        padding-inline: 25px;
+        font-size: 5vw;
+        font-weight: bold;
+    }
+    .sectionLine{
+        width: 100%;
+        border-bottom: 5px ridge rgb(73, 76, 78);
+    }
+    .projectPara {
+        padding-top: 25px;
+        padding-inline: 25px;
+        font-size: 3vw;
+    }
 }
